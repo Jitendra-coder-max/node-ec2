@@ -1,11 +1,12 @@
-
 import http from 'http';
 
 const PORT = 5000;
 
 const server = http.createServer((req, res) => {
 
-    // Normal GET API
+    console.log('Method:', req.method);
+    console.log('URL:', req.url);
+
     if (req.method === 'GET' && req.url === '/users') {
 
         res.writeHead(200, {
